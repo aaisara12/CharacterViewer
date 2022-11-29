@@ -10,10 +10,10 @@ namespace CaliburnMicroApp_Practice3.Models
     /// <summary>
     /// Represents a particular stat of a character
     /// </summary>
-    public class StatModel
+    public class AbilityModel
     {
         public string Name { get; set; }
-        public int Val { get; set; }
-        public Color Color { get; set; }    
+        public int Mana { get; set; }
+        public String Color { get; set; }    
     }
 }

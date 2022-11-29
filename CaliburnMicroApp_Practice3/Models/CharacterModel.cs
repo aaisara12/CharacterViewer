@@ -13,6 +13,6 @@ namespace CaliburnMicroApp_Practice3.Models
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public List<StatModel> Stats { get; set; }
+        public List<AbilityModel> Abilities { get; set; }
     }
 }

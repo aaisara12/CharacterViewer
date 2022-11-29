@@ -38,8 +38,15 @@
                 Grid.Row="2" Grid.Column="1"
                 CornerRadius="7">
             <StackPanel Orientation="Vertical" MinWidth="100">
-                <TextBlock>Selection 1</TextBlock>
-                <TextBlock>Selection 2</TextBlock>
+                <ComboBox ItemsSource="{Binding Characters}" SelectedItem="{Binding SelectedCharacter}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Name}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
             </StackPanel>
         </Border>
 
@@ -77,15 +84,29 @@
                         <StackPanel Margin="10">
                             <TextBlock HorizontalAlignment="Center" FontSize="18" FontWeight="Bold">Description</TextBlock>
                             <!-- TODO: Change this to bind to the selected characters's description-->
-                            <TextBlock TextWrapping="Wrap">A friendly creature who loves lounging in the sun.</TextBlock>
+                            <TextBlock x:Name="SelectedCharacter_Description" TextWrapping="Wrap">A friendly creature who loves lounging in the sun.</TextBlock>
                         </StackPanel>
                     </Border>
-                    <!-- Stats -->
+                    <!-- Abilities -->
                     <Border Grid.Column="1" CornerRadius="10,10,10,10"
                             Background="#FFF3F3F3">
-                        <StackPanel>
-                            <TextBlock HorizontalAlignment="Center" FontSize="18" FontWeight="Bold">Stats</TextBlock>
+                        <StackPanel Margin="10">
+                            <TextBlock HorizontalAlignment="Center" FontSize="18" FontWeight="Bold">Abilities</TextBlock>
                             <!-- TODO: Add ItemsControl list bound to the selected character's stats list-->
+                            <ItemsControl x:Name="SelectedCharacter_Abilities">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border BorderThickness="1" BorderBrush="#FF171717" Padding="5" Background="{Binding Color}">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding Name}"/>
+                                                <TextBlock Text=" ("/>
+                                                <TextBlock Text="{Binding Mana}"/>
+                                                <TextBlock Text=")"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
                         </StackPanel>
                     </Border>
                 </Grid>
