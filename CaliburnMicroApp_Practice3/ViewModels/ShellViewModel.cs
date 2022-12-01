@@ -34,7 +34,7 @@ namespace CaliburnMicroApp_Practice3.ViewModels
                 {
                     Name = "Anduin",
                     Description = "Anduin Llane Wrynn is the King of Stormwind, High King of the Alliance, and commander of all Alliance forces.",
-                    Abilities = new List<AbilityModel>() { new AbilityModel() { Name = "Consecration", Mana = 4, Color = "#f2e78f" } } 
+                    Abilities = new List<AbilityModel>() { new AbilityModel() { Name = "Consecration", Mana = 4, Color = "#f2e78f" }, new AbilityModel() { Name = "Eye for an Eye", Mana = 1, Color = "#f2e78f" } } 
                 },
 
                 // Gul'dan

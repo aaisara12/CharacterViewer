@@ -77,6 +77,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ImagePathConverter.cs" />
     <Compile Include="Models\CharacterModel.cs" />
     <Compile Include="Models\AbilityModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
@@ -112,12 +113,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Characters\anduin.png" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Views\ShellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mana_crystal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Characters\gul%27dan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,5 +14,6 @@ namespace CaliburnMicroApp_Practice3.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public List<AbilityModel> Abilities { get; set; }
+        public string ImgName { get => Name.ToLower() + ".png"; }
     }
 }
