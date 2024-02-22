@@ -43,6 +43,14 @@ namespace CaliburnMicroApp_Practice3.ViewModels
                     Name = "Gul'dan",
                     Description = "Gul'dan was the first orcish warlock as well as the de facto founder of the Horde. Tutored by the leaders of the Burning Legion, he is considered one of the most powerful warlocks to have ever existed. He founded the Shadow Council and created the first death knights.",
                     Abilities = new List<AbilityModel> { new AbilityModel() { Name = "Corrupting Mist", Mana = 2, Color = "#d276db" } }
+                },
+
+                // Malfurion Stormrage
+                new CharacterModel()
+                {
+                    Name = "Malfurion",
+                    Description = "Malfurion Stormrage was the first mortal druid on Azeroth, and the night elf who initiated the mainstream use of druidism among the kaldorei people ten millennia ago under tutelage of the demigod Cenarius. He is the twin brother of Illidan Stormrage, as well as the loving and beloved husband of the high priestess of Elune, Tyrande Whisperwind. ",
+                    Abilities = new List<AbilityModel> {new AbilityModel() { Name = "Nourish", Mana = 5, Color = "#8acf93" }, new AbilityModel() { Name = "Astral Communion", Mana = 4, Color = "#e9eff7" } }
                 }
             };
         }
